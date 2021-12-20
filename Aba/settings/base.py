@@ -21,11 +21,12 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 
-# Application definition
-
 INSTALLED_APPS = [
     'home',
     'search',
+
+    "wagtail_localize",
+    "wagtail_localize.locales",
 
     'wagtail.contrib.forms',
     'wagtail.contrib.redirects',
@@ -49,6 +50,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+# Application definition
+
 
 MIDDLEWARE = [
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -59,6 +62,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
 
+    "django.middleware.locale.LocaleMiddleware",
     'wagtail.contrib.redirects.middleware.RedirectMiddleware',
 ]
 
@@ -126,6 +130,8 @@ USE_I18N = True
 
 USE_L10N = True
 
+WAGTAIL_I18N_ENABLED = True
+
 USE_TZ = True
 
 
@@ -157,14 +163,11 @@ MEDIA_URL = '/media/'
 
 WAGTAIL_SITE_NAME = "Aba"
 
-# Search
-# https://docs.wagtail.io/en/stable/topics/search/backends.html
-WAGTAILSEARCH_BACKENDS = {
-    'default': {
-        'BACKEND': 'wagtail.search.backends.database',
-    }
-}
-
 # Base URL to use when referring to full URLs within the Wagtail admin backend -
 # e.g. in notification emails. Don't include '/admin' or a trailing slash
 BASE_URL = 'http://example.com'
+
+WAGTAIL_CONTENT_LANGUAGES = LANGUAGES =[
+    ('sq',"Albanian"),
+    ('en',"English"),
+]
