@@ -24,6 +24,7 @@ BASE_DIR = os.path.dirname(PROJECT_DIR)
 INSTALLED_APPS = [
     'home',
     'search',
+    'navbar',
 
     "wagtail_localize",
     "wagtail_localize.locales",
@@ -168,6 +169,6 @@ WAGTAIL_SITE_NAME = "Aba"
 BASE_URL = 'http://example.com'
 
 WAGTAIL_CONTENT_LANGUAGES = LANGUAGES =[
-    ('sq',"Albanian"),
     ('en',"English"),
+    ('sq',"Albanian"),
 ]

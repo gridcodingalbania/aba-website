@@ -1,0 +1,19 @@
+.navbar{
+    background-color: black !important;
+}
+
+.nav-link{
+    color:white;
+    text-decoration: none !important;
+    margin-right: 62px;
+    font-size: 17px;
+    font-weight: normal;
+}
+.nav-link:hover{
+    color:white;
+    transform: translateY(-3px);
+    transition: 300ms all ease-in-out;
+}
+.navbar-brand img{
+    margin-left: 152px;
+}

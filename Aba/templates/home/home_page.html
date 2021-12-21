@@ -1,0 +1,48 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="owl-carousel owl-theme" id="owl">
+        <div class="site-slider">
+          <div class="slider-img">
+            <img src="/media/original_images/foto_1.jpg" alt="foto1">
+          </div>
+            <div class="slider-text">
+                <h3> Lorem ipsum 1</h3>
+                <p>Lorem ipsum 111</p>
+            </div>
+        </div>
+        <div class="site-slider">
+          <div class="slider-img">
+            <img src="/media/original_images/foto_1.jpg" alt="foto1">
+          </div>
+            <div class="slider-text">
+                <h3> Lorem ipsum 1</h3>
+                <p>Lorem ipsum 111</p>
+            </div>
+        </div>
+        <div class="site-slider">
+          <div class="slider-img">
+            <img src="/media/original_images/foto_1.jpg" alt="foto1">
+          </div>
+            <div class="slider-text">
+                <h3> Lorem ipsum 1</h3>
+                <p>Lorem ipsum 111</p>
+            </div>
+        </div>
+</div>
+{% block extra_js %}
+<script>
+    $(document).ready(function () {
+    $("#owl").owlCarousel({
+        items:1,
+        loop:true,
+        dots:true,
+        autoplay:true,
+        autoplaySpeed:1000,
+        smartSpeed:1500,
+        autoplayHoverPause:true,
+    })
+});
+</script>
+
+{% endblock %}
+{% endblock %}
