@@ -22,23 +22,38 @@
 .slider-text {
   position: absolute;
   top: 50%;
-  left: 100px;
+  left: 0;
   line-height: normal;
   color: #fff;
   transform: translateY(-50%);
-  background-color: transparent;
-  border: 1px solid white;
-
+  background:rgba(255,255,255,.2);
+  width: 50%;
+  text-align: left;
+  padding-left: 10%;
+  padding-top:50px;
+  padding-bottom: 50px;
 }
 .slider-text h3 {
-  font-size: 40px;
-  font-weight: 400;
+  font-size: 47px;
+  font-weight: bold;
   margin-bottom: 10px;
+  color: black;
 }
 .slider-text p {
-  font-size: 18px;
+  font-size: 47px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: black;
 }
 
+.slider-btn{
+  width: 166px;
+  height: 53px;
+  border: 1px solid #EBE200;
+  border-radius: 20px;
+  background-color: #EBE200;
+  margin-top: 25px;
+}
 .owl-dots {
   position: absolute;
   top: 50%;
