@@ -50,7 +50,7 @@
                 <ul class="navbar-nav ml-auto">
                         {% for item in navigation.menu_items.all %}
                             <li>
-                                <a href="{{ item.link }}" class="nav-link"{% if item.open_in_new_tab %} target="_blank"{% endif %}>{{ item.title }}</a>
+                                <a href="{{ item.link }}" class="nav-link nav-link-ltr"{% if item.open_in_new_tab %} target="_blank"{% endif %}>{{ item.title }}</a>
                             </li>
                         {% endfor %}
                 </ul>

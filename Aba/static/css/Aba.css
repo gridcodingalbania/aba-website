@@ -88,16 +88,16 @@ body{
     align-items: center;
     background:#F8F8F8;
     border:none !important;
-    box-shadow: 0 4px 4px -4px rgba(0,0,0,0.24);
+    box-shadow: 5px 5px 5px -4px rgba(0,0,0,0.24);
 }
 .card:hover {
-    box-shadow: 0 28px 40px -12px rgba(0,0,0,0.24);
+    /*box-shadow: 0 28px 40px -12px rgba(0,0,0,0.24);*/
     transform: scale(1.05);
     transition: 300ms all ease-in-out;
 }
 .card:hover .card-title{
     font-weight: bold;
-    transition: 500ms all ease-in-out;
+    transition: 300ms all ease-in-out;
 }
 .card:hover .card-bg {
 	opacity: .8;

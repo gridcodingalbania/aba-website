@@ -26,7 +26,7 @@
   line-height: normal;
   color: #fff;
   transform: translateY(-50%);
-  background:rgba(255,255,255,.2);
+  background:rgba(255,255,255,.4);
   width: 50%;
   text-align: left;
   padding-left: 10%;
@@ -97,3 +97,4 @@
     transform: translateX(0);
   }
 }
+
