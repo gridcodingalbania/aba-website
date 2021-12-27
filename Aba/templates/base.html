@@ -30,6 +30,7 @@
         {# CSS #}
         <link rel="stylesheet" type="text/css" href="{% static 'css/Aba.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/owl.css' %}">
         {% block extra_css %}
             {# Override this in templates to add extra stylesheets #}
@@ -38,7 +39,12 @@
 
     <body class="{% block body_class %}{% endblock %}">
         {% wagtailuserbar %}
-             <nav class="navbar navbar-expand-lg">
+        <div class="whatsappicon">
+        <a href="https://api.whatsapp.com/send?phone=355675551418&text=Pershendetje." class="whatsapp" target="_blank">
+            <img src="/media/original_images/whatsapp.png">
+        </a>
+        </div>
+        <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="/">
                 <img src="/media/original_images/aba_logo.png" />
             </a>
@@ -58,7 +64,37 @@
           </nav>
 
         {% block content %}{% endblock %}
-
+        
+        {# Footer #}
+        <div class="container-fluid footer-wrapper">
+            <footer>
+                <div class="row">
+                    <div class="col-lg-2 footer_img_col">
+                        <img src="/media/original_images/aba_logo.png" class="footer-logo">
+                    </div>
+                    <div class="col-lg-4 ml-auto">
+                        <div class="footer-links">
+                        {% for item in navigation.menu_items.all %}
+                                <a href="{{ item.link }}" class="footer-link"{% if item.open_in_new_tab %} target="_blank"{% endif %}>{{ item.title }}</a>
+                        {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4 ml-auto">
+                        <div class="footer-icons">
+                            <a href="#"><img src="/media/original_images/m_icon.png"></a>
+                            <a href="#"><img src="/media/original_images/phone_icon.png"></a>
+                            <a href="#"><img src="/media/original_images/fb_icon.png"></a>
+                            <a href="#"><img src="/media/original_images/ig_icon.png"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-copyright text-center">
+                    <p class="copyright_text">Copyright @2021 Design & Developed by <a href="https://gridcoding.com/" target="_blank">Grid Coding</a></p>
+                </div>
+            </footer>
+        </div>
         {# Global javascript #}
         {# Jquery / Bootstrap #}
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
