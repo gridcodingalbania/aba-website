@@ -3,6 +3,12 @@
 body{
     font-family: 'Montserrat',sans-serif;
 }
+.navbar-icons{
+    display: none;
+}
+.navbar-toggler{
+    padding: 0 !important;
+}
 .wood-wrapper{
     background-image: url("/media/original_images/wood_background.jpg");
     background-size: cover;
@@ -19,6 +25,17 @@ body{
     width: 90%;
     margin: auto;
     overflow: hidden;
+}
+
+.open_button{
+    transition: 200ms all ease-in-out;
+    background-image: url("/media/original_images/navbar_dots.png") !important;
+    background-repeat: no-repeat;
+}
+.close_button{
+    transition: 200ms all ease-in-out;
+    background-image: url("/media/original_images/navbar_close.png") !important;
+    background-repeat: no-repeat;
 }
 
 .content .content-overlay {

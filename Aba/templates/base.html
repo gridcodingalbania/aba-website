@@ -32,7 +32,9 @@
         <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'css/owl.css' %}">
+        <link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
         {% block extra_css %}
+
             {# Override this in templates to add extra stylesheets #}
         {% endblock %}
     </head>
@@ -48,7 +50,7 @@
             <a class="navbar-brand" href="/">
                 <img src="/media/original_images/aba_logo.png" />
             </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" id="nav_button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
 
@@ -59,6 +61,12 @@
                                 <a href="{{ item.link }}" class="nav-link nav-link-ltr"{% if item.open_in_new_tab %} target="_blank"{% endif %}>{{ item.title }}</a>
                             </li>
                         {% endfor %}
+                        <div class="navbar-icons">
+                            <li><a href="#"><img src="/media/original_images/m_icon.png"></a></li>
+                            <li><a href="#"><img src="/media/original_images/phone_icon.png"></a></li>
+                            <li><a href="#"><img src="/media/original_images/fb_icon.png"></a></li>
+                            <li><a href="#"><img src="/media/original_images/ig_icon.png"></a></li>
+                        </div>
                 </ul>
             </div>
           </nav>
@@ -106,7 +114,7 @@
 
 
         <script type="text/javascript" src="{% static 'js/Aba.js' %}"></script>
-
+        <script type="text/javascript" src="{% static 'js/navbar.js' %}"></script>
         {% block extra_js %}
             {# Override this in templates to add extra javascript #}
         {% endblock %}
